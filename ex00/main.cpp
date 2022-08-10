@@ -2,14 +2,13 @@
 
 int main(void)
 {
-	Fixed number;
-	Fixed number2;
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
+	c = b;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;;
 
-	number.setRawBits(2);
-	number2 = number;
-
-	std::cout << number.getRawBits() << std::endl;
-	std::cout << number2.getRawBits() << std::endl;
-	
 	return (0);
 }

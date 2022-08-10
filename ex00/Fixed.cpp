@@ -22,13 +22,13 @@ Fixed::Fixed()
 
 Fixed::Fixed(const Fixed &fixedPointNumber)
 {
-	std::cout << "overloaded constructor called" << std::endl;
+	std::cout << "copy constructor called" << std::endl;
 	numberValue = fixedPointNumber.numberValue;
 };
 
 void Fixed::operator= (const Fixed &fixedPointNumber)
 {
-	std::cout << "copy assignment overload called" << std::endl;
+	std::cout << "copy assignment operator called" << std::endl;
 	numberValue = fixedPointNumber.numberValue;
 };
 
@@ -39,10 +39,12 @@ Fixed::~Fixed()
 
 int Fixed::getRawBits(void) const
 {
+	std::cout << "getRawBits member function called" << std::endl;
 	return (numberValue);
 };
 
 void Fixed::setRawBits(int const raw)
 {
+	std::cout << "setRawBits member function called" << std::endl;
 	numberValue = raw;
 };
