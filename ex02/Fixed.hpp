@@ -1,6 +1,3 @@
-#include <iostream>
-#include <cmath>
-
 #pragma once
 #include <iostream>
 #include <cmath>
@@ -21,20 +18,20 @@ class Fixed
 	void setNumberValue (int n);
 	int getNumberValue (void);
 	void operator= (const Fixed& fixed);
-	void operator> (const Fixed& fixed);
-	void operator< (const Fixed& fixed);
-	void operator>= (const Fixed& fixed);
-	void operator<= (const Fixed& fixed);
-	void operator== (const Fixed& fixed);
-	void operator!= (const Fixed& fixed);
-	void operator+ (const Fixed& fixed);
-	void operator- (const Fixed& fixed);
-	void operator* (const Fixed& fixed);
-	void operator/ (const Fixed& fixed);
-	void operator++ ();
-	void operator++ (int);
-	void operator-- ();
-	void operator-- (int);
+	bool operator> (const Fixed& fixed);
+	bool operator< (const Fixed& fixed);
+	bool operator>= (const Fixed& fixed);
+	bool operator<= (const Fixed& fixed);
+	bool operator== (const Fixed& fixed);
+	bool operator!= (const Fixed& fixed);
+	Fixed operator+ (const Fixed& fixed);
+	Fixed operator- (const Fixed& fixed);
+	Fixed operator* (const Fixed& fixed);
+	Fixed operator/ (const Fixed& fixed);
+	Fixed operator++ ();
+	Fixed operator++ (int);
+	Fixed operator-- ();
+	Fixed operator-- (int);
 	float toFloat (void) const;
 	int toInt (void) const;
 
